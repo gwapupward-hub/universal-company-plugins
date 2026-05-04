@@ -1,0 +1,35 @@
+{
+  "name": "universal-company-operator-plugin",
+  "description": "Universal command-based company operating system that routes business requests across strategy, product, growth, sales, operations, finance, data, design, legal, and community into structured operator workflows with approval-gated execution.",
+  "version": "1.0.0",
+  "author": {
+    "name": "gwapupward-hub"
+  },
+  "keywords": [
+    "company-os",
+    "business-operator",
+    "strategy",
+    "product",
+    "growth",
+    "sales",
+    "operations",
+    "finance",
+    "analytics",
+    "design",
+    "legal",
+    "community",
+    "approval-gated",
+    "openclaw"
+  ],
+  "components": {
+    "skills": [
+      "skills"
+    ],
+    "commands": [
+      "commands"
+    ],
+    "rules": [
+      "rules"
+    ]
+  }
+}

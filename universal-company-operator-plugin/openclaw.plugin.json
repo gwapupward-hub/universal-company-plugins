@@ -1,0 +1,45 @@
+{
+  "name": "universal-company-operator-plugin",
+  "version": "0.1.0",
+  "description": "Universal AI-powered company operating system that routes commands across business functions and executes real-world actions through plugin integrations.",
+  "author": "gwapupward-hub",
+  "license": "MIT",
+  "entrypoint": "SKILL.md",
+  "type": "plugin",
+  "commands": [
+    "/run business",
+    "/run ceo",
+    "/run product",
+    "/run growth",
+    "/run sales",
+    "/run ops",
+    "/run finance",
+    "/run success",
+    "/run data",
+    "/run design",
+    "/run legal",
+    "/run community",
+    "/run launch",
+    "/run revenue",
+    "/run audit",
+    "/run roadmap"
+  ],
+  "capabilities": [
+    "read",
+    "write",
+    "analyze",
+    "deploy",
+    "publish",
+    "collect_payment",
+    "onchain_lookup",
+    "create_task"
+  ],
+  "permissions": {
+    "requiresApproval": true,
+    "autoAllowed": [
+      "read",
+      "analyze",
+      "onchain_lookup"
+    ]
+  }
+}

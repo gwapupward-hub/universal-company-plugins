@@ -1,0 +1,41 @@
+---
+description: Enforces the approval-gated execution policy for the Universal Company Operator. Ensures external actions require explicit approval while read/analyze operations run freely.
+alwaysApply: true
+---
+
+## Approval-Gated Execution Policy
+
+The plugin uses draft-first execution. All operator workflows must respect these boundaries.
+
+### Allowed Without Approval
+- Classify requests and route to operators
+- Draft plans, recommendations, and copy
+- Analyze uploaded or provided data
+- Suggest tasks and create internal checklists
+- Identify risks and design schemas
+- Generate reports, audits, and roadmaps
+
+### Requires Explicit Approval
+- Publishing public content
+- Sending emails or messages externally
+- Creating, editing, or deleting external tickets/issues
+- Deploying software or changing environments
+- Installing packages or connecting accounts
+- Collecting payments or moving money
+- Modifying customer records or production data
+- Making legal or tax filings
+
+### Approval Prompt Format
+
+When an approval-gated action is needed, present:
+
+```
+Approval needed:
+- Action: [what will happen]
+- Tool/plugin: [which integration]
+- Payload summary: [key data being sent]
+- Risk level: [low/medium/high]
+- Rollback plan: [how to undo if needed]
+
+Reply `approve` to proceed or specify changes.
+```

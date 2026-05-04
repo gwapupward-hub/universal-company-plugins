@@ -1,0 +1,28 @@
+{
+  "name": "universal-company-operator-plugin",
+  "version": "0.1.0",
+  "description": "Universal AI-powered company operating system for command-based business execution through plugin integrations.",
+  "private": false,
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "openclaw.plugin.json",
+    "package.json",
+    "SKILL.md",
+    "README.md",
+    "COMMANDS.md",
+    "PLUGIN_INTERFACE.md",
+    "PLUGIN_SCHEMA.json",
+    "CHANGELOG.md",
+    "index.js"
+  ],
+  "openclaw": {
+    "compat": {
+      "pluginApi": "1"
+    },
+    "build": {
+      "openclawVersion": ">=0.1.0"
+    }
+  }
+}
