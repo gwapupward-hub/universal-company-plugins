@@ -1,0 +1,40 @@
+{
+  "plugins": [
+    {
+      "id": "project_management_generic",
+      "name": "Generic Project Management",
+      "category": "project_management",
+      "capabilities": ["read", "write", "create_task"],
+      "auth": { "type": "api_key", "envVars": ["PROJECT_MANAGEMENT_API_KEY"] },
+      "actions": [
+        {
+          "name": "createTask",
+          "method": "POST",
+          "endpoint": "https://api.example.com/tasks",
+          "requiredInputs": ["title", "description", "assignee", "dueDate"],
+          "output": "task_url",
+          "usedByCommands": ["product", "ops", "roadmap", "audit"],
+          "requiresApproval": true
+        }
+      ]
+    },
+    {
+      "id": "analytics_generic",
+      "name": "Generic Analytics",
+      "category": "analytics",
+      "capabilities": ["read", "analyze"],
+      "auth": { "type": "bearer", "envVars": ["ANALYTICS_TOKEN"] },
+      "actions": [
+        {
+          "name": "getMetrics",
+          "method": "GET",
+          "endpoint": "https://api.example.com/metrics",
+          "requiredInputs": ["dateRange", "metricNames"],
+          "output": "metrics_report",
+          "usedByCommands": ["data", "audit", "growth", "revenue"],
+          "requiresApproval": false
+        }
+      ]
+    }
+  ]
+}

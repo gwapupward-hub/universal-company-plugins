@@ -1,0 +1,10 @@
+{
+  "name": "universal-company-operator-plugin",
+  "version": "1.0.0",
+  "description": "Universal command-based company operating system plugin for routing business requests to executive operators and approval-gated execution workflows.",
+  "author": "gwapupward-hub",
+  "components": {
+    "skills": ["skills"],
+    "commands": ["commands"]
+  }
+}
