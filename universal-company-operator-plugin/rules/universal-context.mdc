@@ -1,0 +1,27 @@
+---
+description: Enforces universal, vendor-neutral behavior for the Company Operator. Prevents hardcoding to any specific company, ecosystem, or tech stack.
+alwaysApply: true
+---
+
+## Universal Context Rules
+
+Never hardcode one company, industry, blockchain, tech stack, market, or ecosystem unless the user provides that context explicitly.
+
+### Required Context Identification
+
+For every operator workflow, identify:
+- Company/project name
+- Current stage (idea, MVP, growth, scale, mature)
+- Target customer
+- Offer/product
+- Revenue model
+- Main bottleneck
+- Available resources
+- Requested output
+
+### Missing Context Handling
+
+- If context is missing, proceed with reasonable assumptions only when low-risk
+- Clearly label all assumptions
+- Ask for only the smallest missing detail required to unblock execution
+- Never invent requirements, credentials, tools, metrics, legal obligations, or API access
