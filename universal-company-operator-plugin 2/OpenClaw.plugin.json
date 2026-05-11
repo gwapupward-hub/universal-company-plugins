@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.0.0",
+  "name": "universal-company-operator-plugin",
+  "displayName": "Universal Company Operator System Plugin",
+  "version": "1.0.0",
+  "description": "Execution plugin for running company/operator workflows through structured /run commands, task routing, project analysis, and operating-system style outputs.",
+  "author": "gwapupward-hub",
+  "visibility": "public",
+  "license": "MIT",
+  "runtime": {
+    "type": "node",
+    "entry": "src/index.js"
+  },
+  "commands": [
+    {
+      "name": "run_company_audit",
+      "description": "Analyze a company/project and produce a concise operator audit.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["projectName", "projectDescription"],
+        "properties": {
+          "projectName": { "type": "string" },
+          "projectDescription": { "type": "string" },
+          "stage": { "type": "string", "default": "early" },
+          "goals": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    {
+      "name": "route_operator_task",
+      "description": "Route a task to the correct company operator role and generate an execution plan.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["task"],
+        "properties": {
+          "task": { "type": "string" },
+          "companyContext": { "type": "string" },
+          "priority": { "type": "string", "enum": ["low", "medium", "high", "critical"], "default": "medium" }
+        }
+      }
+    },
+    {
+      "name": "generate_sprint_plan",
+      "description": "Generate a company sprint plan with owners, milestones, risks, and deliverables.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["objective"],
+        "properties": {
+          "objective": { "type": "string" },
+          "timeframe": { "type": "string", "default": "7 days" },
+          "teamSize": { "type": "number", "default": 1 },
+          "constraints": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    {
+      "name": "build_department_map",
+      "description": "Map which departments/roles a company needs based on its current stage and goals.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["companyType", "currentStage"],
+        "properties": {
+          "companyType": { "type": "string" },
+          "currentStage": { "type": "string" },
+          "revenueModel": { "type": "string" },
+          "mainBottleneck": { "type": "string" }
+        }
+      }
+    }
+  ],
+  "permissions": {
+    "network": false,
+    "filesystem": false,
+    "secrets": []
+  }
+}

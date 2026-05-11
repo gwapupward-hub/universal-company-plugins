@@ -1,0 +1,22 @@
+{
+  "run_company_audit": {
+    "projectName": "Example Company",
+    "projectDescription": "A SaaS platform helping creators manage subscriptions.",
+    "stage": "pre-seed",
+    "goals": ["Launch MVP", "Get first 100 users"]
+  },
+  "route_operator_task": {
+    "task": "Create a 30-day launch marketing plan",
+    "priority": "high"
+  },
+  "generate_sprint_plan": {
+    "objective": "Ship MVP onboarding flow",
+    "timeframe": "7 days",
+    "teamSize": 2
+  },
+  "build_department_map": {
+    "companyType": "SaaS startup",
+    "currentStage": "MVP",
+    "mainBottleneck": "No clear growth system"
+  }
+}
